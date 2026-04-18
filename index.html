@@ -47,22 +47,17 @@ nav{
 }
 
 .hero p{
+    max-width:600px;
     opacity:0.8;
     margin-top:15px;
-    max-width:600px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
     padding:12px 18px;
     border-radius:10px;
     text-decoration:none;
     font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
 }
 
 /* SECTION */
@@ -77,45 +72,38 @@ h2{
     margin-bottom:20px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
     background:rgba(255,255,255,0.06);
     padding:20px;
-    margin:12px 0;
+    margin:15px 0;
     border-radius:15px;
+    cursor:pointer;
     transition:0.3s;
 }
 
 .card:hover{
-    transform:scale(1.03);
+    transform:scale(1.02);
     background:rgba(255,255,255,0.12);
 }
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-}
-
-.feature{
-    background:rgba(255,255,255,0.06);
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-}
-
-/* SKILLS */
-.bar{
-    background:rgba(255,255,255,0.1);
-    border-radius:20px;
+/* DETAILS */
+.details{
+    max-height:0;
     overflow:hidden;
-    margin:10px 0;
+    transition:0.5s;
 }
 
-.fill{
-    height:10px;
-    background:#00d4ff;
+.details.active{
+    max-height:500px;
+    margin-top:10px;
+}
+
+/* IMAGE */
+.details img{
+    width:100%;
+    border-radius:10px;
+    margin-top:10px;
 }
 
 /* FOOTER */
@@ -129,105 +117,86 @@ footer{
 
 <body>
 
-<nav>
-    <b>Mark Presas Portfolio</b>
-</nav>
+<nav><b>Mark Presas Portfolio</b></nav>
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Mark Anthony M. Presas</h1>
+<h1>Mark Anthony M. Presas</h1>
+<p>
+A passionate tech enthusiast focused on building websites, applications, and interactive systems. 
+I combine creativity and logic to develop functional digital projects while continuously improving my skills in web development, UI design, and problem-solving.
+</p>
 
-    <p>
-        A passionate tech enthusiast focused on building websites, exploring game development,
-        and creating digital solutions that combine creativity and logic. I continuously improve
-        my skills in web development, UI design, and problem-solving to deliver real results.
-    </p>
-
-    <div style="margin-top:25px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-        
-        <a href="https://facebook.com/YOURPROFILE" target="_blank" class="btn" style="background:#1877f2; color:white;">Facebook</a>
-        
-        <a href="mailto:presasmarkanthony@gmail.com" class="btn" style="background:#00d4ff; color:black;">Email Me</a>
-        
-        <a href="#about" class="btn" style="border:1px solid #00d4ff; color:#00d4ff;">View Portfolio</a>
-
-    </div>
+<div style="margin-top:20px;">
+<a href="mailto:presasmarkanthony@gmail.com" class="btn" style="background:#00d4ff;color:black;">Email Me</a>
+<a href="https://facebook.com/YOURPROFILE" target="_blank" class="btn" style="background:#1877f2;color:white;">Facebook</a>
 </div>
-
-<!-- ABOUT -->
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-Hi! I’m Mark Anthony M. Presas, a tech-oriented student passionate about building websites, applications, and simple game systems. I enjoy creating digital solutions that combine creativity and logic.
-
-<br><br>
-
-I continuously explore web development, UI design, and programming concepts. My goal is to grow as a developer and future Virtual Assistant capable of handling both creative and technical tasks.
 </div>
-</section>
-
-<!-- FEATURES -->
-<section>
-<h2>What I Can Do</h2>
-<div class="grid">
-<div class="feature">Website Design</div>
-<div class="feature">Game Logic</div>
-<div class="feature">App Concepts</div>
-<div class="feature">Tech Fixing</div>
-<div class="feature">Content Creation</div>
-<div class="feature">UI Design</div>
-</div>
-</section>
 
 <!-- SKILLS -->
 <section>
-<h2>Skills</h2>
+<h2>Skills (Click 😎)</h2>
 
-<p>HTML / CSS</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="card" onclick="toggle('html')">
+HTML / CSS
+<div class="details" id="html">
+I build responsive websites with clean layouts and smooth user interfaces. I focus on structure, design, and usability to ensure a good user experience.
 
-<p>Game Development</p>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
+</div>
+</div>
 
-<p>Application Concepts</p>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
+<div class="card" onclick="toggle('game')">
+Game Development
+<div class="details" id="game">
+I create simple game systems involving movement, collision, scoring, and interactive mechanics. These projects helped me understand logic flow and user interaction.
 
-<p>Tech Troubleshooting</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1">
+</div>
+</div>
+
+<div class="card" onclick="toggle('app')">
+Application Concepts
+<div class="details" id="app">
+I design simple apps with functional logic such as buttons, interaction systems, and workflow behavior.
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+</div>
+</div>
 
 </section>
 
 <!-- PROJECTS -->
 <section>
-<h2>Projects</h2>
+<h2>Projects (Click 😎)</h2>
 
-<div class="card"><b>AquaSwipe</b><br>Smart solar cleaning system with automation.</div>
-<div class="card"><b>Game Projects</b><br>Built simple interactive game logic and systems.</div>
-<div class="card"><b>Web Projects</b><br>Responsive websites with clean UI.</div>
-<div class="card"><b>App Concepts</b><br>Designed simple functional apps.</div>
+<div class="card" onclick="toggle('aqua')">
+AquaSwipe
+<div class="details" id="aqua">
+A smart solar panel cleaning system designed to automate maintenance using water spray and brush mechanisms.
 
-</section>
-
-<!-- GOALS -->
-<section>
-<h2>Goals</h2>
-<div class="card">
-To become a skilled developer and Virtual Assistant while improving in web development and automation.
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
 </div>
-</section>
-
-<!-- CONTACT -->
-<section>
-<h2>Contact</h2>
-<div class="card">
-Email: presasmarkanthony@gmail.com <br>
-<a href="https://facebook.com/YOURPROFILE" target="_blank">Facebook Profile</a>
 </div>
+
+<div class="card" onclick="toggle('web')">
+Web Projects
+<div class="details" id="web">
+Developed multiple responsive websites with clean UI and structured layouts.
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+</div>
+</div>
+
 </section>
 
-<footer>
-© 2026 Mark Presas
-</footer>
+<footer>© 2026 Mark Presas</footer>
+
+<script>
+function toggle(id){
+document.getElementById(id).classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
