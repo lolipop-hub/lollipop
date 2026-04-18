@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark Presas Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#070022,#14003b);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    padding:15px;
+    text-align:center;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    z-index:100;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    opacity:0.8;
+    margin-top:10px;
+}
+
+/* SCROLL ICON */
+.scroll{
+    margin-top:30px;
+    font-size:14px;
+    opacity:0.6;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(10px);}
+}
+
+/* SECTION */
+section{
+    padding:90px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+h2{
+    color:#00d4ff;
+    margin-bottom:20px;
+}
+
+/* CARDS */
+.card{
+    background:rgba(255,255,255,0.06);
+    padding:20px;
+    margin:12px 0;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+    background:rgba(255,255,255,0.12);
+}
+
+/* SKILL BAR */
+.bar{
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    overflow:hidden;
+    margin:10px 0;
+}
+
+.fill{
+    height:10px;
+    background:#00d4ff;
+}
+
+/* TIMELINE */
+.timeline{
+    border-left:2px solid #00d4ff;
+    padding-left:15px;
+}
+
+.timeline div{
+    margin-bottom:15px;
+}
+
+/* FEATURES GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.feature{
+    background:rgba(255,255,255,0.06);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <b>Mark Presas Portfolio</b>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Hi, I'm Mark 👋</h1>
+    <p>Tech | Developer | Creator | Future VA</p>
+    <div class="scroll">⬇ Scroll down to explore more</div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<h2>About Me</h2>
+<div class="card">
+Hi! I’m Mark Anthony M. Presas, a tech-oriented student passionate about building websites, applications, and simple game systems. I enjoy creating digital solutions that combine creativity and logic.
+<br><br>
+I continuously explore web development, UI design, and basic programming concepts. My goal is to grow as a developer and future Virtual Assistant capable of handling both creative and technical tasks.
+</div>
+</section>
+
+<!-- FEATURES -->
+<section>
+<h2>What I Can Do</h2>
+<div class="grid">
+
+<div class="feature">Website Design</div>
+<div class="feature">Basic Game Logic</div>
+<div class="feature">App Concepts</div>
+<div class="feature">Tech Fixing</div>
+<div class="feature">Content Creation</div>
+<div class="feature">UI Design</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2>Skills Level</h2>
+
+<p>HTML / CSS</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+
+<p>Game Development Logic</p>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+
+<p>Application Concepts</p>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+
+<p>Tech Troubleshooting</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+
+</section>
+
+<!-- PROJECTS -->
+<section>
+<h2>Projects</h2>
+
+<div class="card">
+<b>AquaSwipe</b><br>
+Smart solar panel cleaning system with automation using spray and brush mechanism.
+</div>
+
+<div class="card">
+<b>Game Concepts</b><br>
+Built simple game logic like movement, obstacles, scoring systems, and interactive mechanics.
+</div>
+
+<div class="card">
+<b>Web Development Projects</b><br>
+Clean responsive websites with modern UI and smooth layouts.
+</div>
+
+<div class="card">
+<b>Application Ideas</b><br>
+Designed simple apps with interactive features and logic-based systems.
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+<section>
+<h2>Journey</h2>
+
+<div class="timeline">
+<div>📌 Started learning HTML & CSS</div>
+<div>📌 Built first website layouts</div>
+<div>📌 Created game logic concepts</div>
+<div>📌 Developed AquaSwipe project</div>
+<div>📌 Building full portfolio systems</div>
+</div>
+
+</section>
+
+<!-- GOALS -->
+<section>
+<h2>Goals</h2>
+<div class="card">
+To become a skilled developer and Virtual Assistant, improving in web development, automation, and digital problem solving.
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+<div class="card">
+Email: presasmarkanthony@gmail.com <br>
+<a href="URL">FACE BOOK</a>
+</div>
+</section>
+
+<footer>
+Made by Mark Presas • Portfolio Project
+</footer>
+
+</body>
+</html>
